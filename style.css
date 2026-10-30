@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Pinyon+Script&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: hsl(210, 40%, 50%);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.logo{
+    width: 80px;
+}
+
+ul.menu li a{
+    font-size: 40px;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  text-decoration: none ;
+  text-transform: capitalize;
+}
+
+ul.menu li{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+
+/*Let us style up the hero here*/
+.hero{
+    position: relative;
+    background-image: url("hero.png");
+    height: 550px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+
+.hero::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.518);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 550px;
+    width: 100%;
+    z-index: -1;
+}
+
+div.hero p.p1{
+    color: aliceblue;
+    font-size: 50px;
+}
+
+div.hero p.p2{
+    color: aliceblue;
+    font-size: 30px;
+}
+
+.button{
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: hsl(210, 40%, 50%);
+    transition: all ease-in-out .5s;
+    border: none;
+}
+
+.button:hover{
+    background-color: hsl(210, 40%, 50%);
+    color: aliceblue;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    gap: 10px;
+}
+
+.card{
+    background-color: aliceblue;
+    padding-bottom: 2rem;
+}
+
+div.card img{
+    width: 100%;
+}
+
+.cardcontent{
+    padding: 15px;
+}
+
+.cardtitle{
+    font-weight: bold;
+    font-size: 25px;
+    color:  hsl(210, 40%, 50%);
+}
+
+.cardbody{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+div.cardcontent a{
+    color: aliceblue;
+    text-decoration: none;
+    background-color:  hsl(210, 40%, 50%);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+}
+
+.clubtitle{
+    color: #333;
+    text-align: center;
+    margin: 1rem 0rem;
+    font-size: 2rem;
+}
+
+.aboutcontent{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.proprietorimage{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.imgcontainer{
+    width: 400px;
+    padding-right: 2rem;
+}
+
+.aboutcontainer{
+    width: 400px;
+}
+
+div.aboutcontainer p.title1{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+div.aboutcontainer p.title2{
+    font-size: 1.5rem;
+}
+
+div#about h2{
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.footer{
+    background-color: hsl(210, 40%, 50%);
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+}
+
+.fa-instagram{
+    padding: 0rem 1.5rem;
+}
+
+.instagram{
+    color: aliceblue !important;
+}
+
+/*Responsiveness begins here*/
+@media(max-width:800px) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .imgcontainer{
+        width: 600px;
+        padding: 1rem;
+    }
+
+    .aboutcontainer{
+        width: 600px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media(max-width:600px){
+    ul.menu li a{
+        font-size: 25px;
+    }
+
+    div.hero p.p1{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    div.hero p.p2{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+    }
+
+     .imgcontainer{
+        width: 500px;
+        padding: 1rem;
+    }
+
+    .aboutcontainer{
+        width: 400px;
+        margin-bottom: 2rem;
+    }
+
+    .copyright{
+        font-size: 15px;
+        width: 250px;
+    }
+
+    .fa-instagram{
+        padding: 0rem 0.5rem;
+    }
+}
+
+@media(max-width:400px){
+     .aboutcontainer{
+        width: 350px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media(max-width:365px){
+    .logo{
+        width: 50px;
+    }
+
+     ul.menu li a{
+        font-size: 20px;
+    }
+
+    .navbar{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .aboutcontainer{
+        width: 250px;
+        margin-bottom: 2rem;
+    }
+
+       .imgcontainer{
+        width: 250px;
+        padding: 1rem;
+    }
+
+    .footer{
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright{
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+
+}
